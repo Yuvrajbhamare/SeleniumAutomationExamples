@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test parallel="classes" name="chrometest"/>
+	<parameter name="browser" value="chrome"/>
+	<parameter name="URL" value="https://uat.www.sscconsolidation.com/home"/>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="practiceSet2.ExcelClass"/>
+      <class name="practiceSet2.ExcelUtils"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
