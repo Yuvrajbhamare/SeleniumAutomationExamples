@@ -1,5 +1,6 @@
 package utilities;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -13,6 +14,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+
+import testCases.BaseClass;
 
 public class ExtentReportManager implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
@@ -70,13 +73,13 @@ public class ExtentReportManager implements ITestListener {
 		test.log(Status.FAIL, result.getName() + "got Failed");
 		test.log(Status.INFO, result.getThrowable().getMessage());
 
-		/*
-		 * try {
-		 * 
-		 * String imgPath = new BaseClass().captureScreen(result.getName());
-		 * test.addScreenCaptureFromPath(imgPath); } catch (IOException e1) {
-		 * e1.printStackTrace(); }
-		 */
+		try {
+
+			String imgPath = new BaseClass().captureScreen(result.getName());
+			test.addScreenCaptureFromPath(imgPath);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 
 	}
 

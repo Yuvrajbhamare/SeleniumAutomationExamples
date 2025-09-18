@@ -35,6 +35,7 @@ public class multipletagsfromxml {
 		default:
 			System.out.println("Invalid Browser");
 			return;
+
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

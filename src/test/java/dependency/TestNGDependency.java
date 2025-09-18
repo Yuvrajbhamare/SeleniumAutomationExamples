@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class TestNGDependency
 
 {
-	@Test(priority = 1)
+	@Test(priority = 1, dependsOnMethods = { "advacnedsearch", "logout" })
 	void openapp() {
 		Assert.assertTrue(true);
 	}

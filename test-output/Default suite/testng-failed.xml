@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practiceSet3.P3_SystemSetPro">
+      <class name="pageObjectFinal.TC_001_LoginTest">
         <methods>
-          <include name="sliders"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- practiceSet3.P3_SystemSetPro -->
+      </class> <!-- pageObjectFinal.TC_001_LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
